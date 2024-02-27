@@ -117,3 +117,4 @@ For a successful update, respond with a 200 status code along with update resour
 For a successful deletion, respond with a 204 status code along with update resource in response body. If recipe does not exist, respond with 404 status code.
 
 ### UML Diagram
+![uml diagram](https://github.com/Howarang12/CS361-recipe-app-backend/blob/main/UML.PNG)
