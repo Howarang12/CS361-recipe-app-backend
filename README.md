@@ -6,24 +6,24 @@ This microservice utilizes HTTP methods (GET, POST, PUT, and DELETE) to manipula
 
 ### Getting Recipes
 
-Endpoint: '/recipes'
-Method: GET
-Description: Retrieve all the recipes in the database.
+Endpoint: '/recipes'  
+Method: GET  
+Description: Retrieve all the recipes in the database.  
 Example:
 
-useEffect(() => {
+useEffect(() => {  
 axios  
 .get('http://localhost:9000/recipes')  
 .then(response => setRecipes(response.data.data))  
 .catch(error => console.error('Error fetching recipes:', error));  
 }, [])
 
-Endpoint: '/recipes/{recipeID}'
-Method: GET
-Description: Retrieve an existing recipe with the specified ID.
+Endpoint: '/recipes/{recipeID}'  
+Method: GET  
+Description: Retrieve an existing recipe with the specified ID.  
 Example:
 
-useEffect(() => {
+useEffect(() => {  
 axios  
 .get('http://localhost:9000/recipes/{recipeID}')  
 .then(response => setRecipe(response.data))  
@@ -32,9 +32,9 @@ axios
 
 ### Adding Recipe
 
-Endpoint: '/recipes'
-Method: POST
-Description: Add a new recipe to the database
+Endpoint: '/recipes'  
+Method: POST  
+Description: Add a new recipe to the database  
 Example:
 
 data = {  
@@ -70,9 +70,9 @@ axios
 
 ### Editing Recipe
 
-Endpoint: '/recipes/{recipeID}'
-Method: PUT
-Description: Update an existing recipe with the specified ID
+Endpoint: '/recipes/{recipeID}'  
+Method: PUT  
+Description: Update an existing recipe with the specified ID  
 Example:
 
 using the data from above for instance
@@ -84,9 +84,9 @@ axios
 
 ### Deleting Recipe
 
-Endpoint: '/recipes/{recipeID}'
-Method: DELETE
-Description: Delete an existing recipe with the specified ID
+Endpoint: '/recipes/{recipeID}'  
+Method: DELETE  
+Description: Delete an existing recipe with the specified ID  
 Example:
 
 axios  
@@ -117,4 +117,5 @@ For a successful update, respond with a 200 status code along with update resour
 For a successful deletion, respond with a 204 status code along with update resource in response body. If recipe does not exist, respond with 404 status code.
 
 ### UML Diagram
+
 ![uml diagram](https://github.com/Howarang12/CS361-recipe-app-backend/blob/main/UML.PNG)
