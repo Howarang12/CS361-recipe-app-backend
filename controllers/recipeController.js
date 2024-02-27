@@ -113,7 +113,7 @@ exports.deleteRecipeByID = async(request, response) => {
       return response.status(404).json({ message: 'Recipe not found' })
     }
 
-    return response.status(200).send({ message: 'Recipe deleted successfully' })
+    return response.status(204).send({ message: 'Recipe deleted successfully' })
   } catch (error) {
     response.status(500).send({ message: error.message })
   }
